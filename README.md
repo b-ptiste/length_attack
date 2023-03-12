@@ -1,6 +1,6 @@
 # lengthAttack
 
-* `more details in the pdf report`
+* **More details in the pdf report**
 
 The length attack is an attack that takes place in several contexts: 
 
