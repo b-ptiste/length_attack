@@ -21,14 +21,36 @@ The operator wants to send a message to a server and he wants the server to be a
 the authenticity of the message. The operator therefore also sends the hash of the message so
 that the server can compare and is sure to receive the authentic message. To do this, the server will calculate the hash of the message and if the hash is authentic then the server can assume that the message is also authentic.
 
+example : 
+
+* message sent :
+
+Hello, I would like to order two pizzas and three drinks for bugers ! My adress is one the main street 1 floor ! thank you in, see U
+
+* message after modification :
+
+Hello, I would like to order two pizzas and three drinks for bugers ! My adress is one the main street 1 floor ! thank you in, see U. Could you please send them to this new address - 21 rue jean paul - ? I made a mistake in my last message!
+
+The server then accept the malicious message
+
+![image](image/example.png)
+
 ## Requirements
 For this project I used the openssl library and used the openssl/md5.h package
 
 ## Run 
-To run the project I use the following command lines:
+
+How to run ?
 
 * `gcc main.c lengthAttack.c -o main.exe -lcrypto`
 * `.\main.exe`
+
+You want to try ?
+
+* in `main.c` change :
+    * `key` : secret key (could be whatever you want) 
+    * `received_message ` : message sent (what should receive the server) 
+    * `attacker_message ` : message malicious added to the `received_message` 
 
 ## Warning
 **When changing the messages or keys, it is necessary to keep the '\0' at the end
